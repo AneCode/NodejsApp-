@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<script src="JQuery.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			alert('he')
+		    $('button').on('click', function( event ) {
+				event.preventDefault();
+				$.ajax('/process',{
+				type:'POST',
+				data:{ num: $('#luckyNumber').val() },
+				dataType:'json',
+				success: function(response)
+				{ 
+			     $('h1').text('Your fav. Color is '+response.color);
+				},
+				error:function (err) {
+				   alert('error')
+				}
+		   });
+		});
+	});	    
+	</script>
+</head>
+<body>
+<form action="/process" method="POST">
+<div>
+<label for="fieldColor">Your Lucky Number: </label>
+<input type="text" id="luckyNumber" name="luckyNumber">
+</div>
+<div>
+<button type="submit" name="confirmation">Submit</button>
+</div>
+</form>
+<h1></h1>
+</body>
+</html>

@@ -1,0 +1,13 @@
+form{
+	 width: 336px;
+    margin-top: 100px;
+    height: 149px;
+    border: 2px solid black;   
+}
+button{
+	background-color:#9266d2;
+	width:85px;
+	height:30px;
+	margin:50%; 
+	margin: 22px 0px 0px 115px; 
+}
