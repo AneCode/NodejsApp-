@@ -1,0 +1,18 @@
+ We are learning Node.JS from Prolog Academy. {{courses}}
+    	<!-- {{#each courses}}
+    	  <div>value is:{{@index}}:{{this}}</div>
+    	{{/each}} -->
+    	<!-- <div>
+    	{{#with prolog}} 
+    	    <div> Courses are : {{courses}} Mentors are: {{mentor}} </div>
+    	 {{/with}}
+    	 </div> -->
+    	 <div>
+    	 	{{#if imageToggle}}
+    	 	 <img src="{{pname}}"  width="100px;" height="100px;">
+    	 	 <h1>{{puser}}</h1>
+              {{else}}
+              <img src="person1.jpg " width="100px;" height="100px;">
+    	 	{{/if}}
+    	 </div>
+ 
